@@ -1,0 +1,242 @@
+*, ::backdrop, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Space Mono', monospace;
+    background-color: black;
+}
+
+.container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 1024px;
+    background-color: hsl(185, 41%, 84%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.logo {
+    padding-bottom: 82px;
+}
+
+.card-container {
+    width: 920px;
+    height: 480px;
+    display: flex;
+    background-color: white;
+    padding: 32px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    box-shadow: 7px 20px 60px -20px hsl(184deg 14% 56% / 85%);
+
+}
+
+
+.input-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* flex-grow: 1; */
+    position: relative;
+    align-items: center;
+    height: 100%;
+}
+
+.tip label {  /* Modifier afin d'agrandir le label et non l'input */
+    width: 117px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* appearance: none; */
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: hsl(186, 14%, 43%);
+}
+
+#custom {
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(180, 25%, 32%);
+
+}
+
+#input input:checked + label{
+    border: 2px solid hsl(173, 46%, 50%);
+}
+
+.tip input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.tip div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input ~ label {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+input:checked + label {
+    background-color: hsl(173, 46%, 50%);
+}
+
+#bill, #people {
+    width: 100%;
+    height: 48px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 79%, 24%);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    margin-top: 6px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: hsl(180, 60%, 21%);
+}
+
+input:placeholder-shown {
+    color: hsl(186, 14%, 43%);
+
+}
+
+
+#bill:hover, #people:hover, #custom:hover {
+    cursor: pointer;
+    border: 2px solid hsl(173, 46%, 50%);
+}
+
+.tip label:hover{
+    background-color: hsl(173, 46%, 50%);
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: hsl(173, 46%, 50%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+#bill {
+    margin-bottom: 40px;
+    background: no-repeat url(./images/icon-dollar.svg),
+    hsl(189, 41%, 97%);
+    background-position: 15px center;
+}
+
+#people {
+    background: no-repeat url(./images/icon-person.svg),
+    hsl(189, 41%, 97%);
+    background-position: 15px center;
+    
+}
+
+.people {
+    margin-top: 40px;
+}
+
+.output-container {
+    width: 50%;
+    margin-left: 32px;
+    padding: 40px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.amount, .total {
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+h2 span {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(184deg 14% 56%);
+}
+
+
+#amount, #total {
+    width: 100%;
+    height: 71px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 71px;
+    text-align: right;
+    color: hsl(173, 46%, 50%);
+}
+
+#reset {
+    width: 333px;
+    height: 48px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    background-color: hsl(183, 79%, 24%);
+    border: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: hsla(183, 100%, 15%, 0.5);
+}
