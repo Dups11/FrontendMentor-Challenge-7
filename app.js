@@ -9,6 +9,12 @@ function foo() {
     const form = document.forms[0];
     let tipValue = form.elements["tip"];
     let total = 0
+    let checkbox = document.getElementById('custom')
+    let raz = document.getElementById('customValue')
+    
+    if (checkbox.checked != true) {
+        raz.value = 0;
+    }
 
     if (customValue > 0) {
         total = ((bill * customValue) / 100).toFixed(2);
@@ -22,6 +28,7 @@ function foo() {
         document.getElementById("amount").innerHTML = "$" + amount;
     }
     console.log(tipValue.value);
+    
 }
 
 
@@ -32,3 +39,4 @@ function reset() {
     document.getElementById("total").innerHTML = "$0.00";
     document.getElementById("amount").innerHTML = "$0.00";
 }
+
