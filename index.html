@@ -43,14 +43,14 @@
             <label for="50">50%</label>
             <div class="custom">
               <input type="radio" name="tip" value="0" id="custom"><input type="number" id="customValue"
-                name="customValue" min="0" value="0">
+                name="customValue" min="0" max="100" value="0">
               <label for="custom">Custom</label>
             </div>
           </div>
           <div class="people">
-            <div class="Number of People">
-              <div><label for="people">Number of People</label></div>
-              <input type="number" id="people" name="people" required min="1" placeholder="0">
+            <div class="numberofpeople">
+              <div><label for="people">Number of People</label><span id="error" class="error">can't be zero</span></div>
+              <input type="number" id="people" name="people" required min="0" placeholder="0">
             </div>
           </div>
         </div>

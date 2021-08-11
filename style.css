@@ -57,6 +57,8 @@ body {
     padding: 16px;
 }
 
+
+
 .tip {
     display: flex;
     flex-direction: row;
@@ -129,6 +131,11 @@ label {
     text-align: right;
     border: 2px solid hsl(173, 46%, 50%);
     background-color:hsl(189, 41%, 97%)
+    
+}
+
+#bill:focus, #people:focus {
+    border: 2px solid hsl(173, 46%, 50%);
 
 }
 
@@ -150,6 +157,11 @@ input ~ label {
 
 input:checked + label {
     background-color: hsl(173, 46%, 50%);
+    
+}
+
+input {
+    outline: hsl(173, 46%, 50%);
 }
 
 #bill, #people {
@@ -193,17 +205,27 @@ input:checked + label {
     background: no-repeat url(./images/icon-dollar.svg),
     hsl(189, 41%, 97%);
     background-position: 18px center;
+    
 }
 
 #people {
     background: no-repeat url(./images/icon-person.svg),
     hsl(189, 41%, 97%);
-    background-position: 15px center;
+    background-position: 18px center;
     
 }
 
 .people {
     margin-top: 40px;
+}
+
+.numberofpeople div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    display: none;
 }
 
 .output-container {
@@ -269,6 +291,11 @@ h2 span {
     font-size: 18px;
     font-weight: 700;
     color: hsla(183, 100%, 15%, 0.5);
+}
+
+.errordisplay {
+    color: red;
+    display: block;
 }
 
 /* Mobile View */

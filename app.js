@@ -19,15 +19,29 @@ function foo() {
     if (customValue > 0) {
         total = ((bill * customValue) / 100).toFixed(2);
     } else {
-        // tipValue = form.elements["tip"];
-        total = (bill * parseInt(tipValue.value)) / 100;
+        total = (bill * parseInt(tipValue.value) / 100).toFixed(2);
     }
-    if (people > 0 && bill > 0) {
-        document.getElementById("total").innerHTML = "$" + total;
-        let amount = (total / people).toFixed(2);
-        document.getElementById("amount").innerHTML = "$" + amount;
+    console.log(people);
+    
+    
+    if (people == 0) {
+        document.getElementById('error').classList.add('errordisplay')
+        document.getElementById('people').style.border = '2px solid red'
+        
     }
-    console.log(tipValue.value);
+    
+    else {
+
+        if (bill > 0 && people >0) {
+            document.getElementById('error').classList.remove('errordisplay')
+            document.getElementById('people').style.border = "2px solid hsl(173, 46%, 50%)"  
+            document.getElementById("total").innerHTML = "$" + total;
+            let amount = (total / people).toFixed(2);
+            document.getElementById("amount").innerHTML = "$" + amount;
+            
+        }
+
+    }
     
 }
 
