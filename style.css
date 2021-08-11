@@ -98,7 +98,7 @@ label {
     display: block;
     z-index: -1;
     height: 48px;
-    width: 117px;
+    /* width: 117px; */
     cursor: pointer;
     position: absolute;
     text-align: right;
@@ -110,16 +110,25 @@ label {
     -o-border-radius: 5px;
 }
 
-.tip .custom {
+/* .tip .custom {
     width: 117px;
-}
+} */
 
 #input input:checked + label{
     border: 2px solid hsl(173, 46%, 50%);
+    color: hsl(183, 100%, 15%);
 }
 
 #input input:checked ~ input[type=number] {
     z-index: 10;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 79%, 24%);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    text-align: right;
+    border: 2px solid hsl(173, 46%, 50%);
+    background-color:hsl(189, 41%, 97%)
 
 }
 
@@ -129,7 +138,7 @@ label {
 
 .tip div {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-between;
 }
 
@@ -183,7 +192,7 @@ input:checked + label {
     margin-bottom: 40px;
     background: no-repeat url(./images/icon-dollar.svg),
     hsl(189, 41%, 97%);
-    background-position: 15px center;
+    background-position: 18px center;
 }
 
 #people {
@@ -270,6 +279,7 @@ h2 span {
         height: 933px;
         bottom: 0%;
         justify-content: flex-end;
+        
     }
 
     .logo {
@@ -278,7 +288,7 @@ h2 span {
 
     .card-container {
         flex-direction: column;
-        padding: 24px;
+        padding: 24px 24px 32px;
         width: 375px;
         height: 789px;
         align-items: baseline;
@@ -295,6 +305,7 @@ h2 span {
 
     .output-container {
         width: 100%;
+        height: 257px;
         margin: 0;
         padding: 24px;
     }
@@ -306,13 +317,22 @@ h2 span {
 
     .tip label {
         width: 147px;
+        margin-top: 15px;
     }
     
     .people {
         position: relative;
         bottom: 0%;
-        margin-bottom: 31px;
+        margin-bottom: 23px;
         margin-top: 33px;
     }
 
+    #bill {
+        margin-bottom: 34px;
+    }
+
+        #customValue {
+            width: 147px;
+            bottom: 0;
+        }
 }
