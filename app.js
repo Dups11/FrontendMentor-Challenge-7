@@ -1,6 +1,5 @@
 document.getElementById("input").addEventListener("change", foo);
 
-// console.log(parseInt(tipValue.value) * 2 )
 
 function foo() {
     let bill = document.getElementById("bill").value;
@@ -21,7 +20,6 @@ function foo() {
     } else {
         total = (bill * parseInt(tipValue.value) / 100).toFixed(2);
     }
-    console.log(people);
     
     
     if (people == 0) {
