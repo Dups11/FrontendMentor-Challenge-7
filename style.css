@@ -59,9 +59,9 @@ body {
 
 .tip {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /* flex-grow: 1; */
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     align-items: center;
     height: 100%;
@@ -236,13 +236,14 @@ h2 span {
 
 
 #amount, #total {
-    width: 100%;
+    max-width: 68%;
     height: 71px;
     font-size: 48px;
     font-weight: 700;
     line-height: 71px;
     text-align: right;
     color: hsl(173, 46%, 50%);
+
 }
 
 #reset {
